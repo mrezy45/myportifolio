@@ -3,6 +3,11 @@ body {
     font-size: 18px;
 }
 
+* {
+    padding: 5px; /* Apply padding to all elements */
+    box-sizing: border-box; /* Ensure padding doesn't affect element size */
+}
+
 /*NAVBAR*/
 .navbar {
     display: flex;
@@ -28,7 +33,11 @@ body {
 .navbar .menu {
     display: flex;
     gap: 10px;
-
+    flex-direction: column; /* Stack items vertically */
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px;
+    border: none; /* Remove border */
 }
 .navbar .button {
    color: #000000;
@@ -381,19 +390,23 @@ button:hover:after {
 }
 
 .footer-content .contact-info form {
-    margin-top: 10px;
+    display: flex; /* Arrange input and button in a row */
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add spacing between input and button */
 }
 
 .footer-content .contact-info input {
+    width: 75%; /* Slightly increase input width */
+    height: 40px; /* Ensure input and button have the same height */
     padding: 10px;
-    width: 200px;
-    margin-right: 10px;
     border: 1px solid #f7f6f6;
     border-radius: 5px;
 }
 
 .footer-content .contact-info button {
-    padding: 10px 20px;
+    width: 25%; /* Adjust button width */
+    height: 40px; /* Ensure input and button have the same height */
+    padding: 10px;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     border: none;
@@ -436,7 +449,7 @@ button:hover:after {
     }
 
     .menu-icon {
-        display: flex; /* Ensure menu icon is visible for screens below 768px */
+        display: block; /* Ensure menu icon is visible for screens below 768px */
     }
     .navbar {
         flex-direction: row; /* Arrange items in a row */
@@ -455,6 +468,10 @@ button:hover:after {
         padding: 10px;
         border: 1px solid #ddd;
         border-radius: 5px;
+        position: relative; /* Ensure it appears on the next line */
+    }
+    .navbar .menu.show {
+        display: flex; /* Show menu when toggled */
     }
     .navbar .logo {
         margin-left: 10px; /* Align logo to the left */
@@ -566,7 +583,7 @@ button:hover:after {
 }
 
 .menu-icon {
-    display: none; /* Hidden by default */
+    display: block; /* Hidden by default */
     font-size: 24px;
     cursor: pointer;
     color: #000000;
