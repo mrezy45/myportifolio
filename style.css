@@ -38,6 +38,11 @@ body {
     color: #ffffff;
 }
 
+.navbar .menu .button {
+    margin-top: 10px; /* Add spacing for the button in the menu */
+    align-self: center; /* Center the button in the menu */
+}
+
 /* Style for the buttons */
 button {
     display: inline-block;
@@ -315,7 +320,7 @@ button:hover:after {
 }
 
 .project-item a {
-    color: #0000ff;
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
 }
@@ -419,36 +424,73 @@ button:hover:after {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    /* Navbar */
-    .navbar {
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    .menu-icon {
+        display: flex; /* Ensure menu icon is visible for screens below 768px */
+    }
+    .navbar {
+        flex-direction: row; /* Arrange items in a row */
+        justify-content: space-between; /* Space between logo and menu icon */
+        align-items: center;
+        padding: 10px;
+        width: 100%;
     }
     .navbar .menu {
+        display: none; /* Hide menu by default */
         flex-direction: column;
+        align-items: center;
         gap: 10px;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
     }
     .navbar .logo {
-        margin-left: 0;
+        margin-left: 10px; /* Align logo to the left */
         font-size: 35px;
     }
     .navbar .button {
         margin-right: 0;
     }
+    
+    .navbar .menu .button {
+        width: 100%; /* Make the button full-width in mobile view */
+    }
+
+    .menu-icon {
+        display: block; /* Ensure menu icon is visible */
+        margin-right: 10px; /* Align menu icon to the right */
+    }
 
     /* Hero Section */
+    .hero {
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+    }
     .hero .top-row {
         flex-direction: column;
         align-items: center;
     }
     .hero .content {
         text-align: center;
-        margin: 20px 0;
+        margin: 10px 0;
     }
     .hero .image img {
         margin-right: 0;
         max-width: 80%;
+        height: auto;
     }
     .hero .bottom-row {
         flex-direction: column;
@@ -456,35 +498,77 @@ button:hover:after {
     }
 
     /* Skills Section */
+    .skills {
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+    }
     .skill-row {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Two columns for skills */
         gap: 20px;
+        justify-content: center;
         margin: 0 20px;
     }
 
     /* Experience Section */
+    .experience {
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+    }
     .experience-item {
         width: 90%;
+        margin: 10px 0;
     }
 
     /* Projects Section */
+    .projects {
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+    }
     .project-item {
         width: 90%;
+        margin: 10px 0;
     }
 
     /* Footer Section */
+    .footer {
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+    }
     .footer-content {
         flex-direction: column;
+        align-items: center;
         gap: 20px;
     }
     .footer-content .row {
         align-items: center;
     }
     .footer-content .contact-info input {
-        width: 100%;
+        width: 90%;
         margin-bottom: 10px;
     }
     .footer-content .contact-info button {
-        width: 100%;
+        width: 90%;
     }
+    .footer-content .links {
+        display: flex; /* Change to flex layout */
+        flex-direction: row; /* Arrange items in a row */
+        justify-content: center; /* Center items horizontally */
+        gap: 15px; /* Add spacing between items */
+        text-align: center;
+    }
+    .footer-content .links a {
+        flex: 1; /* Allow links to take equal space */
+    }
+}
+
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    cursor: pointer;
+    color: #000000;
+    margin-right: 20px; /* Add spacing */
 }
