@@ -75,14 +75,13 @@ body {
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: row; /* Ensure logo and menu icon remain on the same line */
-        justify-content: space-between; /* Space between logo and menu icon */
-        align-items: center;
-        padding: 10px 20px;
+        flex-direction: column; /* Stack logo and menu vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px 10px; /* Reduce padding to minimize space */
     }
 
     .navbar .logo {
-        font-size: 35px; /* Adjust font size for smaller screens */
+        font-size: 30px; /* Adjust font size for smaller screens */
         margin-left: 0; /* Remove extra margin */
     }
 
@@ -90,8 +89,15 @@ body {
         display: block; /* Show menu icon */
         font-size: 24px;
         cursor: pointer;
-        cursor: pointer;
-        margin-bottom: 10px; /* Add spacing below the menu icon */
+        position: absolute; /* Keep the menu icon in the same position */
+        top: 10px; /* Adjust top position */
+        right: 10px; /* Adjust right position */
+        z-index: 1000; /* Ensure it stays above other elements */
+    }
+
+    .navbar {
+        position: relative; /* Ensure the navbar doesn't affect the menu icon's position */
+        padding: 10px 10px; /* Reduce padding to minimize space */
     }
 
     .navbar .menu {
@@ -102,7 +108,7 @@ body {
         background-color: #ffffff;
         padding: 10px;
         border-radius: 5px;
-        margin-top: 10px; /* Add spacing below the menu icon */
+        margin-top: 10px; /* Add spacing below the logo */
     }
 
     .navbar .menu.show {
@@ -137,11 +143,13 @@ body {
     /* Experience Section */
     .experience-item {
         width: 90%;
+        padding-right: 20px; /* Add 20px padding to the right */
     }
 
     /* Projects Section */
     .project-item {
         width: 90%;
+        padding-right: 20px; /* Add 20px padding to the right */
     }
 
     /* Footer Section */
@@ -566,7 +574,7 @@ button:hover:after {
         display: flex;
         flex-direction: column; /* Stack logo, menu icon, and menu vertically */
         align-items: flex-start; /* Align items to the left */
-        padding: 10px 20px;
+        padding: 10px 10px; /* Reduce padding to minimize space */
     }
     .navbar .menu {
         flex-direction: column;
@@ -574,7 +582,7 @@ button:hover:after {
     }
     .navbar .logo {
         margin-left: 0;
-        font-size: 35px;
+        font-size: 30px; /* Adjust font size for smaller screens */
     }
     .navbar .button {
         margin-right: 0;
@@ -585,7 +593,7 @@ button:hover:after {
         align-self: flex-end; /* Align menu icon to the right */
         font-size: 24px;
         cursor: pointer;
-        margin-bottom: 10px; /* Add spacing below the menu icon */
+        margin: 0; /* Ensure no margin changes when clicked */
     }
 
     .navbar .menu {
@@ -596,7 +604,7 @@ button:hover:after {
         background-color: #ffffff;
         padding: 10px;
         border-radius: 5px;
-        margin-top: 10px; /* Add spacing below the menu icon */
+        margin-top: 10px; /* Add spacing below the logo */
     }
 
     .navbar .menu.show {
@@ -631,11 +639,13 @@ button:hover:after {
     /* Experience Section */
     .experience-item {
         width: 90%;
+        padding-right: 20px; /* Add 20px padding to the right */
     }
 
     /* Projects Section */
     .project-item {
         width: 90%;
+        padding-right: 20px; /* Add 20px padding to the right */
     }
 
     /* Footer Section */
