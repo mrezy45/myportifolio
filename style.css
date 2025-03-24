@@ -1,4 +1,16 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content is spaced properly */
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
 }
@@ -6,11 +18,12 @@ body {
 /*NAVBAR*/
 .navbar {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row; /* Ensure logo and menu icon are on the same line */
+    justify-content: space-between; /* Space between logo and menu icon */
     align-items: center;
     background-color: #ffffff;
     padding: 10px 20px; /* Add consistent padding */
-    flex-wrap: wrap; /* Ensure items wrap properly on smaller screens */
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 .navbar a {
     color: #000000;
@@ -24,13 +37,14 @@ body {
 .navbar .logo {
     font-size: 35px; /* Adjust font size for better visibility */
     font-weight: bold;
-    margin-right: auto; /* Push logo to the left */
+    margin-left: 0; /* Align logo to the left */
 }
 .navbar .menu {
     display: flex;
     gap: 15px; /* Add spacing between menu items */
     flex-wrap: wrap; /* Ensure menu items wrap properly */
     justify-content: flex-end; /* Align menu items to the right */
+    align-items: center; /* Align items vertically */
 }
 .navbar .button {
    color: #000000;
@@ -56,24 +70,108 @@ body {
     font-size: 24px;
     cursor: pointer;
     color: #000000;
+    margin-right: 0; /* Align menu icon to the right */
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Ensure logo and menu icon remain on the same line */
+        justify-content: space-between; /* Space between logo and menu icon */
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .navbar .logo {
+        font-size: 35px; /* Adjust font size for smaller screens */
+        margin-left: 0; /* Remove extra margin */
+    }
+
     .menu-icon {
-        display: block; /* Show menu icon on smaller screens */
+        display: block; /* Show menu icon */
+        font-size: 24px;
+        cursor: pointer;
+        cursor: pointer;
+        margin-bottom: 10px; /* Add spacing below the menu icon */
     }
 
     .navbar .menu {
         display: none; /* Hide menu by default */
         flex-direction: column; /* Stack menu items vertically */
+        align-items: flex-start; /* Align menu items to the left */
         width: 100%; /* Take full width */
         background-color: #ffffff;
         padding: 10px;
         border-radius: 5px;
+        margin-top: 10px; /* Add spacing below the menu icon */
     }
 
     .navbar .menu.show {
         display: flex; /* Show menu when toggled */
+    }
+
+    /* Hero Section */
+    .hero .top-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero .content {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .hero .image img {
+        margin-right: 0;
+        max-width: 80%;
+    }
+    .hero .bottom-row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Skills Section */
+    .skill-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 0 20px;
+    }
+
+    /* Experience Section */
+    .experience-item {
+        width: 90%;
+    }
+
+    /* Projects Section */
+    .project-item {
+        width: 90%;
+    }
+
+    /* Footer Section */
+    .footer-content {
+        flex-direction: column; /* Stack footer components vertically */
+        align-items: center; /* Center-align all footer components */
+        gap: 20px;
+        text-align: center; /* Center-align text */
+    }
+    .footer-content .row {
+        align-items: center; /* Center-align content within each row */
+    }
+    .footer-content .contact-info input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .footer-content .contact-info button {
+        width: 100%;
+    }
+
+    .footer-content .links {
+        display: flex; /* Change to flex layout */
+        flex-direction: row; /* Arrange items in a row */
+        justify-content: center; /* Center items horizontally */
+        gap: 15px; /* Add spacing between items */
+        text-align: center;
+    }
+
+    .footer-content .links a {
+        flex: none; /* Prevent links from stretching */
     }
 }
 
@@ -225,6 +323,7 @@ button:hover:after {
 .skills {
     padding: 50px;
     background-color: #ffffff;
+    text-align: center; /* Center-align the entire section */
 }
 
 .skills h1 {
@@ -239,11 +338,11 @@ button:hover:after {
 
 .skill-row {
     display: grid;
-    grid-template-columns: repeat(5, 2fr);
+    grid-template-columns: repeat(5, 1fr); /* Adjust columns for equal spacing */
     gap: 35px;
-    margin-left: 80px;
-    margin-right: 80px;
-    justify-items: center;
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center items vertically */
+    margin: 0 auto; /* Center the grid within the section */
 }
 
 .skill {
@@ -253,6 +352,10 @@ button:hover:after {
     width: 150px;
     height: 150px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
 }
 
 .skill img {
@@ -460,9 +563,10 @@ button:hover:after {
 @media (max-width: 768px) {
     /* Navbar */
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
+        display: flex;
+        flex-direction: column; /* Stack logo, menu icon, and menu vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px 20px;
     }
     .navbar .menu {
         flex-direction: column;
@@ -474,6 +578,29 @@ button:hover:after {
     }
     .navbar .button {
         margin-right: 0;
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+        align-self: flex-end; /* Align menu icon to the right */
+        font-size: 24px;
+        cursor: pointer;
+        margin-bottom: 10px; /* Add spacing below the menu icon */
+    }
+
+    .navbar .menu {
+        display: none; /* Hide menu by default */
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: flex-start; /* Align menu items to the left */
+        width: 100%; /* Take full width */
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px; /* Add spacing below the menu icon */
+    }
+
+    .navbar .menu.show {
+        display: flex; /* Show menu when toggled */
     }
 
     /* Hero Section */
@@ -513,11 +640,13 @@ button:hover:after {
 
     /* Footer Section */
     .footer-content {
-        flex-direction: column;
+        flex-direction: column; /* Stack footer components vertically */
+        align-items: center; /* Center-align all footer components */
         gap: 20px;
+        text-align: center; /* Center-align text */
     }
     .footer-content .row {
-        align-items: center;
+        align-items: center; /* Center-align content within each row */
     }
     .footer-content .contact-info input {
         width: 100%;
@@ -525,5 +654,17 @@ button:hover:after {
     }
     .footer-content .contact-info button {
         width: 100%;
+    }
+
+    .footer-content .links {
+        display: flex; /* Change to flex layout */
+        flex-direction: row; /* Arrange items in a row */
+        justify-content: center; /* Center items horizontally */
+        gap: 15px; /* Add spacing between items */
+        text-align: center;
+    }
+
+    .footer-content .links a {
+        flex: none; /* Prevent links from stretching */
     }
 }
