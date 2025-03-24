@@ -75,8 +75,9 @@ body {
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Stack logo and menu vertically */
-        align-items: flex-start; /* Align items to the left */
+        flex-direction: row; /* Ensure logo and menu icon remain on the same line */
+        justify-content: space-between; /* Space between logo and menu icon */
+        align-items: center;
         padding: 10px 10px; /* Reduce padding to minimize space */
     }
 
@@ -108,7 +109,7 @@ body {
         background-color: #ffffff;
         padding: 10px;
         border-radius: 5px;
-        margin-top: 10px; /* Add spacing below the logo */
+        margin-top: 40px; /* Add spacing below the menu icon */
     }
 
     .navbar .menu.show {
@@ -572,7 +573,7 @@ button:hover:after {
     /* Navbar */
     .navbar {
         display: flex;
-        flex-direction: column; /* Stack logo, menu icon, and menu vertically */
+        flex-direction: row; /* Stack logo, menu icon, and menu vertically */
         align-items: flex-start; /* Align items to the left */
         padding: 10px 10px; /* Reduce padding to minimize space */
     }
@@ -604,7 +605,7 @@ button:hover:after {
         background-color: #ffffff;
         padding: 10px;
         border-radius: 5px;
-        margin-top: 10px; /* Add spacing below the logo */
+        margin-top: 10px; /* Add spacing below the menu icon */
     }
 
     .navbar .menu.show {
