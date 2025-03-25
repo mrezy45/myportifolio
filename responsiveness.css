@@ -1,30 +1,28 @@
-/* Responsive Styles */
 @media (max-width: 768px) {
-    /* Navbar */
     .navbar {
-        display: flex;
         flex-direction: column; /* Stack logo and menu vertically */
         align-items: flex-start; /* Align items to the left */
         padding: 10px 10px; /* Reduce padding to minimize space */
     }
-    .navbar .menu {
-        flex-direction: column;
-        gap: 10px;
-    }
+
     .navbar .logo {
-        margin-left: 0;
         font-size: 30px; /* Adjust font size for smaller screens */
-    }
-    .navbar .button {
-        margin-right: 0;
+        margin-left: 0; /* Remove extra margin */
     }
 
     .menu-icon {
         display: block; /* Show menu icon */
-        align-self: flex-end; /* Align menu icon to the right */
         font-size: 24px;
         cursor: pointer;
-        margin: 0; /* Ensure no margin changes when clicked */
+        position: absolute; /* Keep the menu icon in the same position */
+        top: 10px; /* Adjust top position */
+        right: 10px; /* Adjust right position */
+        z-index: 1000; /* Ensure it stays above other elements */
+    }
+
+    .navbar {
+        position: relative; /* Ensure the navbar doesn't affect the menu icon's position */
+        padding: 10px 10px; /* Reduce padding to minimize space */
     }
 
     .navbar .menu {
