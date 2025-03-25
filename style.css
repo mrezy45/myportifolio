@@ -32,6 +32,7 @@ body {
 .navbar.slide-in-left {
     opacity: 1; /* Fully visible */
     transform: translateX(0); /* Move into position */
+    animation: slideInLeft 1.5s forwards; /* Increase duration to 1.5s */
 }
 
 .navbar a {
@@ -160,6 +161,7 @@ button:hover:after {
 .hero.slide-in-right {
     opacity: 1; /* Fully visible */
     transform: translateX(0); /* Move into position */
+    animation: slideInRight 2s forwards; /* Increase duration to 2s */
 }
 
 .hero .content {
@@ -508,6 +510,6 @@ button:hover:after {
 
 /* Animation class for sliding in from the right */
 .section.slide-in-right {
-    animation: slideInRight 0.5s forwards;
+    animation: slideInRight 1.5s forwards; /* Increase duration to 1.5s */
 }
 
