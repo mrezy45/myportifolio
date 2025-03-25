@@ -133,6 +133,10 @@ body {
         width: 100%;
     }
 
+    .hero .content p {
+        font-size: 18px; /* Match the font size of other paragraphs */
+    }
+
     /* Skills Section */
     .skill-row {
         grid-template-columns: repeat(2, 1fr);
