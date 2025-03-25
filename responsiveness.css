@@ -6,6 +6,7 @@
         flex-direction: column; /* Stack logo and menu vertically */
         align-items: flex-start; /* Align items to the left */
         padding: 10px 10px; /* Reduce padding to minimize space */
+        margin-bottom: 5px; /* Reduce the space below the navbar */
     }
 
     .navbar .logo {
@@ -44,6 +45,9 @@
     }
 
     /* Hero Section */
+    .hero {
+        padding-top: 3px; /* Reduce the space above the hero section */
+    }
     .hero .top-row {
         flex-direction: column;
         align-items: center;
@@ -55,9 +59,9 @@
     }
     .hero .image img {
         margin-right: 0;
-        max-width: 80%;
-        width: 100%; /* Make the image cover the width of the viewport */
-        height: 100%; /* Maintain aspect ratio */
+        max-width: 80%;;
+        width: 200%; /* Increase the size of the image */
+        height: auto; /* Maintain aspect ratio */
     }
     .hero .bottom-row {
         flex-direction: column;
@@ -81,6 +85,22 @@
     .project-item {
         width: 90%;
         padding-right: 20px; /* Add 20px padding to the right */
+    }
+
+    .experience-item,
+    .project-item {
+        padding: 0 20px; /* Set equal left and right padding */
+    }
+
+    .experience-row,
+    .project-row {
+        align-items: center; /* Center the components horizontally */
+        text-align: center; /* Center the text */
+    }
+
+    .experience-item,
+    .project-item {
+        margin: 0 auto; /* Center the items */
     }
 
     /* Footer Section */
