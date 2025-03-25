@@ -6,7 +6,7 @@
         flex-direction: column; /* Stack logo and menu vertically */
         align-items: flex-start; /* Align items to the left */
         padding: 10px 10px; /* Reduce padding to minimize space */
-        margin-bottom: 5px; /* Reduce the space under the navbar */
+        margin-bottom: 0; /* Remove any bottom margin */
     }
 
     .navbar .logo {
@@ -47,7 +47,7 @@
 
     /* Hero Section */
     .hero {
-        padding-top: 0; /* Further reduce the space above the hero section */
+        padding-top: 0; /* Eliminate the space above the hero section */
     }
     .hero .top-row {
         flex-direction: column;
