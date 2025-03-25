@@ -56,6 +56,8 @@
     .hero .image img {
         margin-right: 0;
         max-width: 80%;
+        width: 100%; /* Make the image cover the width of the viewport */
+        height: 100%; /* Maintain aspect ratio */
     }
     .hero .bottom-row {
         flex-direction: column;
@@ -109,5 +111,15 @@
 
     .footer-content .links a {
         flex: none; /* Prevent links from stretching */
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .hero .content h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero .content p {
+        font-size: 1rem; /* Ensure paragraph text is consistent */
     }
 }
