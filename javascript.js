@@ -19,33 +19,31 @@ function isInViewport(element) {
 }
 
 function animateSectionsOnScroll() {
-    const sections = document.querySelectorAll('.section:not(.slide-in-left):not(.slide-in-right)');
-    let toggle = true;
+    const sections = document.querySelectorAll('.section:not(.slide-in-right)');
 
     sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-            section.classList.add(toggle ? 'slide-in-left' : 'slide-in-right');
-            toggle = !toggle; // Alternate between left and right
+        if (isInViewport(section)) {
+            section.classList.add('slide-in-right'); // Apply the animation when the section enters the viewport
         }
     });
 }
 
-function animateNavbar() {
+function animateNavbarAndHeroOnLoad() {
     const navbar = document.querySelector('.navbar');
+    const hero = document.querySelector('.hero');
+
     if (navbar) {
-        navbar.classList.add('slide-in-left'); // Add the animation class to the navbar
+        navbar.classList.add('slide-in-left'); // Apply the animation to the navbar
+    }
+
+    if (hero) {
+        hero.classList.add('slide-in-right'); // Apply the animation to the hero section
     }
 }
 
-// Ensure animations are triggered for all sections on load and scroll
+// Ensure animations are triggered for the navbar, hero, and other sections
 window.addEventListener('scroll', animateSectionsOnScroll);
 window.addEventListener('DOMContentLoaded', () => {
-    animateNavbar(); // Trigger navbar animation on DOM load
+    animateNavbarAndHeroOnLoad(); // Trigger navbar and hero animations on DOM load
     animateSectionsOnScroll(); // Trigger section animations on DOM load
-});
-
-window.addEventListener('load', () => {
-    animateNavbar(); // Trigger navbar animation on page load
-    animateSectionsOnScroll(); // Trigger section animations on page load
 });

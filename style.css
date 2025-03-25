@@ -24,8 +24,8 @@ body {
     background-color: #ffffff;
     padding: 10px 20px; /* Add consistent padding */
     flex-wrap: nowrap; /* Prevent wrapping */
-    opacity: 1; /* Initially hidden */
-    transform: translateX(-100%); /* Start off-screen */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100%); /* Start off-screen to the left */
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
@@ -152,6 +152,14 @@ button:hover:after {
     align-items: center;
     padding: 50px;
     background-color: #ffffff;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%); /* Start off-screen to the right */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hero.slide-in-right {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Move into position */
 }
 
 .hero .content {
@@ -467,18 +475,7 @@ button:hover:after {
     text-decoration: underline;
 }
 
-/* Keyframes for sliding animations */
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
+/* Keyframes for sliding in from the right */
 @keyframes slideInRight {
     from {
         opacity: 0;
@@ -490,16 +487,27 @@ button:hover:after {
     }
 }
 
+/* Keyframes for sliding in from the left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* Initial state for all sections */
 .section {
-    opacity: 0; /* Initially hidden */
+    opacity: 1; /* Ensure sections are visible by default */
     transform: translateX(0); /* Neutral position */
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Classes for animations */
-.section.slide-in-left,
+/* Animation class for sliding in from the right */
 .section.slide-in-right {
-    opacity: 1; /* Fully visible after animation */
+    animation: slideInRight 0.5s forwards;
 }
 
