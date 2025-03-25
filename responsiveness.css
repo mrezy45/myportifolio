@@ -46,7 +46,7 @@
 
     /* Hero Section */
     .hero {
-        padding-top: 3px; /* Reduce the space above the hero section */
+        padding-top: 1px; /* Reduce the space above the hero section */
     }
     .hero .top-row {
         flex-direction: column;
@@ -54,7 +54,7 @@
     }
     .hero .content {
         text-align: center;
-        margin: 20px 0;
+        margin: 3px 0;
         
     }
     .hero .image img {

@@ -24,7 +24,16 @@ body {
     background-color: #ffffff;
     padding: 10px 20px; /* Add consistent padding */
     flex-wrap: nowrap; /* Prevent wrapping */
+    opacity: 1; /* Initially hidden */
+    transform: translateX(-100%); /* Start off-screen */
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
+.navbar.slide-in-left {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Move into position */
+}
+
 .navbar a {
     color: #000000;
     text-decoration: none;
@@ -481,19 +490,16 @@ button:hover:after {
     }
 }
 
-/* Initial state for sections */
+/* Initial state for all sections */
 .section {
-    opacity: 1; /* Ensure sections are visible by default */
-    transform: translateX(0);
+    opacity: 0; /* Initially hidden */
+    transform: translateX(0); /* Neutral position */
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 /* Classes for animations */
-.section.slide-in-left {
-    animation: slideInLeft 0.5s forwards;
-}
-
+.section.slide-in-left,
 .section.slide-in-right {
-    animation: slideInRight 0.5s forwards;
+    opacity: 1; /* Fully visible after animation */
 }
 

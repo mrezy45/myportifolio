@@ -13,6 +13,11 @@ function toggleMenu() {
     });
 }
 
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0; // Check if the element is partially visible
+}
+
 function animateSectionsOnScroll() {
     const sections = document.querySelectorAll('.section:not(.slide-in-left):not(.slide-in-right)');
     let toggle = true;
@@ -26,5 +31,21 @@ function animateSectionsOnScroll() {
     });
 }
 
+function animateNavbar() {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        navbar.classList.add('slide-in-left'); // Add the animation class to the navbar
+    }
+}
+
+// Ensure animations are triggered for all sections on load and scroll
 window.addEventListener('scroll', animateSectionsOnScroll);
-window.addEventListener('load', animateSectionsOnScroll); // Trigger on page load
+window.addEventListener('DOMContentLoaded', () => {
+    animateNavbar(); // Trigger navbar animation on DOM load
+    animateSectionsOnScroll(); // Trigger section animations on DOM load
+});
+
+window.addEventListener('load', () => {
+    animateNavbar(); // Trigger navbar animation on page load
+    animateSectionsOnScroll(); // Trigger section animations on page load
+});
