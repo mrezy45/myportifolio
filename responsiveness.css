@@ -51,6 +51,10 @@
     .hero .content {
         text-align: center;
         margin: 20px 0;
+        
+    }
+    .hero .content p {
+        font-size: 1rem;
     }
     .hero .image img {
         margin-right: 0;
