@@ -27,6 +27,7 @@ body {
     opacity: 0; /* Initially hidden */
     transform: translateX(-100%); /* Start off-screen to the left */
     transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-bottom: 5px; /* Reduce the space under the navbar */
 }
 
 .navbar.slide-in-left {
@@ -156,6 +157,7 @@ button:hover:after {
     opacity: 0; /* Initially hidden */
     transform: translateX(100%); /* Start off-screen to the right */
     transition: opacity 0.5s ease, transform 0.5s ease;
+    padding-top: 20px; /* Reduce the top padding */
 }
 
 .hero.slide-in-right {

@@ -6,7 +6,7 @@
         flex-direction: column; /* Stack logo and menu vertically */
         align-items: flex-start; /* Align items to the left */
         padding: 10px 10px; /* Reduce padding to minimize space */
-        margin-bottom: 5px; /* Reduce the space below the navbar */
+        margin-bottom: 5px; /* Reduce the space under the navbar */
     }
 
     .navbar .logo {
@@ -26,7 +26,8 @@
 
     .navbar {
         position: relative; /* Ensure the navbar doesn't affect the menu icon's position */
-        padding: 10px 10px; /* Reduce padding to minimize space */
+        padding: 5px 10px; /* Reduce padding to minimize space */
+        padding-top: 10px; /* Add extra padding to the top */
     }
 
     .navbar .menu {
@@ -46,7 +47,7 @@
 
     /* Hero Section */
     .hero {
-        padding-top: 1px; /* Reduce the space above the hero section */
+        padding-top: 0; /* Further reduce the space above the hero section */
     }
     .hero .top-row {
         flex-direction: column;
