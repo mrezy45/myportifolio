@@ -1,4 +1,7 @@
 @media (max-width: 768px) {
+    .body {
+        font-size: 1rem; /* Set base font size to 16px */
+    }
     .navbar {
         flex-direction: column; /* Stack logo and menu vertically */
         align-items: flex-start; /* Align items to the left */
@@ -106,12 +109,5 @@
 
     .footer-content .links a {
         flex: none; /* Prevent links from stretching */
-    }
-}
-
-
-@media (max-width: 768px) {
-    p {
-        font-size: 1rem; /* Set uniform font size for all paragraphs */
     }
 }
