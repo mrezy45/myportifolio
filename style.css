@@ -205,9 +205,9 @@ button:hover:after {
 
 .hero .bottom-row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
+    justify-content: space-between; /* Space between social icons and the line */
+    align-items: center; /* Align items vertically */
+    width: 100%; /* Ensure full width */
 }
 
 .hero .social-icons {
@@ -216,6 +216,7 @@ button:hover:after {
     justify-content: center;
     margin-bottom: 20px;
     border: 2px, #000000;
+    padding-left: 15rem;
 }
 
 .hero .social-icons a {
@@ -237,10 +238,11 @@ button:hover:after {
 }
 
 .hero .line {
-    flex: 1;
+    flex: 1; /* Allow the line to take up remaining space */
     border-top: 2px solid #000000;
-    width: 50%;
-    margin-left: 25px;
+    margin-left: 20px;
+    margin-right: 20px; /* Add spacing between the social icons and the line */
+    width: 40%;
     padding-bottom: 26px;
 }
 
@@ -393,95 +395,140 @@ button:hover:after {
 
 /*FOOTER SECTION*/
 .footer {
-    background-color: black;
+    background-color: black; /* Set footer background to black */
     color: white;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.footer h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.footer .social-icons {
+    padding: 20px;
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
+    flex-direction: column; /* Stack rows vertically */
+    gap: 20px;
 }
 
-.footer .social-icons a {
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
+.footer-top {
+    text-align: left; /* Align the content to the left */
+    padding: 10px 10px;
+    padding-left: 10rem;
+    
 }
 
-.footer .social-icons a:hover {
-    color: #bbbab7;
+.footer-top p {
+    text-align: left; /* Align the paragraph to the left */
+    width: 60%;
 }
 
-.footer-content {
+.footer-bottom {
     display: flex;
-    flex-direction: row; /* Row layout */
-    justify-content: center; /* Center-align the sections horizontally */
-    align-items: flex-start;
-    gap: 15px; /* Reduced gap between rows */
-    flex-wrap: wrap; /* Ensure responsiveness */
+    justify-content: space-between; /* Divide into three sections */
+    gap: 20px;
 }
 
-.footer-content .row {
-    flex: 1; /* Allow rows to take equal space */
+.footer-bottom-row {
     display: flex;
-    flex-direction: column;
-    gap: 5px; /* Reduced gap within each row */
-    align-items: center; /* Center-align content within each row */
+    justify-content: center; /* Center the row horizontally */
+    gap: 10px; /* Reduce the gap between components */
+    width: 100%;
+    text-align: center; /* Center-align text inside the row */
 }
 
-.footer-content .contact-info {
-    text-align: center; /* Center-align text */
-}
-
-.footer-content .contact-info form {
-    margin-top: 10px;
-}
-
-.footer-content .contact-info input {
-    padding: 10px;
-    width: 200px;
-    margin-right: 10px;
-    border: 1px solid #f7f6f6;
-    border-radius: 5px;
-}
-
-.footer-content .contact-info button {
-    padding: 10px 20px;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.footer-content .contact-info button:hover {
-    background-color: #000000;
-    color: #ffffff;
-}
-
-.footer-content .links {
-    text-align: center; /* Center-align text */
+.contact-info,
+.links,
+.request-for {
+    flex: 1; /* Ensure equal space for each section */
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.footer-content .links a {
+.contact-info h1,
+.links h1,
+.request-for h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-info a,
+.links a,
+.request-for a {
     color: white;
     text-decoration: none;
 }
 
-.footer-content .links a:hover {
-    text-decoration: underline;
+.contact-info a:hover,
+.links a:hover,
+.request-for a:hover {
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.contact-info form {
+    display: flex;
+    gap: 10px; /* Add spacing between the textarea and button */
+    align-items: center; /* Align items vertically */
+}
+
+.contact-info form textarea {
+    width: 70%; /* Set width to 70% */
+    height: 50px; /* Match the height of the button */
+    border-radius: 15px; /* Add rounded corners */
+    border: 1px solid #ccc; /* Add a border */
+    padding: 10px; /* Add padding inside the textarea */
+    font-size: 16px; /* Adjust font size */
+    resize: none; /* Disable resizing */
+    box-sizing: border-box; /* Include padding and border in the width/height */
+}
+
+.contact-info form {
+    display: flex;
+    gap: 10px; /* Add spacing between the textarea and button */
+    align-items: center; /* Align items vertically */
+}
+
+.contact-info form button {
+    width: 25%; /* Set width to 20% */
+    height: 50px; /* Match the height of the textarea */
+    border-radius: 15px; /* Add rounded corners */
+    border: none; /* Remove default border */
+    background-color: #ffffff; /* Set background color */
+    color: #000000; /* Set text color */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Add pointer cursor */
+    box-sizing: border-box; /* Include padding and border in the width/height */
+}
+
+.contact-info form button:hover {
+    background-color: #000000; /* Darken background on hover */
+    color: #ffffff;
+}
+
+.contact-info {
+    text-align: left; /* Align everything to the left */
+    padding-left: 10rem;
+}
+
+.contact-info .GetInTouch a {
+    display: block; /* Place WhatsApp and LinkedIn on different lines */
+    margin-bottom: 13px; /* Add spacing between the links */
+}
+
+.links {
+    text-align: left; /* Left-align the components */
+    padding-left: 5rem; /* Reduce padding on the left */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 25px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.footer .social-icons a {
+    color: white; /* Set icon color to white */
+    font-size: 30px; /* Increase the size of the icons */
+    text-decoration: none;
+}
+
+.footer .social-icons a:hover {
+    color: #ccc; /* Optional: Change color on hover for better effect */
 }
 
 /* Keyframes for sliding in from the right */
@@ -518,5 +565,28 @@ button:hover:after {
 /* Animation class for sliding in from the right */
 .section.slide-in-right {
     animation: slideInRight 1.5s forwards; /* Increase duration to 1.5s */
+}
+
+/*REQUEST FOR SECTION*/
+.request-for {
+    flex: 1; /* Take equal space */
+    text-align: left; /* Align text to the left */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.request-for h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.request-for a {
+    color: white;
+    text-decoration: none;
+}
+
+.request-for a:hover {
+    text-decoration: underline;
 }
 
