@@ -8,6 +8,7 @@
         align-items: center; /* Align items vertically */
         padding: 10px 10px; /* Reduce padding to minimize space */
         margin-bottom: 0; /* Remove any bottom margin */
+        gap: 5px; /* Reduce the space between the menu icon and the logo */
     }
 
     .navbar .logo {
@@ -23,6 +24,8 @@
         top: 10px; /* Adjust top position */
         right: 10px; /* Adjust right position */
         z-index: 1000; /* Ensure it stays above other elements */
+        padding-right: 25px;
+        padding-top: 10px;
     }
 
     .navbar {
@@ -60,7 +63,7 @@
         
     }
     .hero .content p {
-        font-size: 1.5rem; /* Increase the font size of the paragraph */
+        font-size: 2.5rem; /* Further increase the font size of the paragraph */
     }
     .hero .image img {
         margin-right: 0;
@@ -72,7 +75,7 @@
         justify-content: center; /* Center the social icons */
         align-items: center;
         flex-direction: row; /* Ensure social icons are in a row */
-        width: 100%;
+        width: 80%;
     }
     .hero .line {
         display: none; /* Hide the line in mobile view */

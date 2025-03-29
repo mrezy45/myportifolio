@@ -32,6 +32,7 @@ body {
     padding: 10px 20px; /* Add consistent padding */
     flex-wrap: nowrap; /* Prevent wrapping */
     margin-bottom: 5px; /* Reduce the space under the navbar */
+    animation: slideInFromLeft 0.8s ease-out; /* Apply the animation */
 }
 
 .navbar.slide-in-left {
@@ -222,7 +223,6 @@ button:hover:after {
     justify-content: center;
     margin-bottom: 20px;
     border: 2px, #000000;
-    padding-left: 8rem;
 }
 
 .hero .social-icons a {
@@ -518,6 +518,18 @@ button:hover:after {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+/* Keyframes for sliding in from the left */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%); /* Start off-screen to the left */
+        opacity: 0; /* Fully transparent */
+    }
+    to {
+        transform: translateX(0); /* Move into position */
+        opacity: 1; /* Fully visible */
     }
 }
 
