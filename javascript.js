@@ -29,12 +29,7 @@ function animateSectionsOnScroll() {
 }
 
 function animateNavbarAndHeroOnLoad() {
-    const navbar = document.querySelector('.navbar');
     const hero = document.querySelector('.hero');
-
-    if (navbar) {
-        navbar.classList.add('slide-in-left'); // Apply the animation to the navbar
-    }
 
     if (hero) {
         hero.classList.add('slide-in-right'); // Apply the animation to the hero section
@@ -44,6 +39,6 @@ function animateNavbarAndHeroOnLoad() {
 // Ensure animations are triggered for the navbar, hero, and other sections
 window.addEventListener('scroll', animateSectionsOnScroll);
 window.addEventListener('DOMContentLoaded', () => {
-    animateNavbarAndHeroOnLoad(); // Trigger navbar and hero animations on DOM load
+    animateNavbarAndHeroOnLoad(); // Trigger hero animations on DOM load
     animateSectionsOnScroll(); // Trigger section animations on DOM load
 });

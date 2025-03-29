@@ -17,6 +17,10 @@ body {
 
 /*NAVBAR*/
 .navbar {
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Position it at the top */
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Ensure it stays above other elements */
     display: flex;
     flex-direction: row; /* Ensure logo and menu icon are on the same line */
     justify-content: space-between; /* Space between logo and menu icon */
@@ -46,6 +50,8 @@ body {
     color: black;
 }
 .navbar .logo {
+    text-decoration: none; /* Remove underline for the link */
+    color: inherit; /* Inherit the text color */
     font-size: 35px; /* Adjust font size for better visibility */
     font-weight: bold;
     margin-left: 0; /* Align logo to the left */
@@ -400,7 +406,7 @@ button:hover:after {
     padding: 20px;
     display: flex;
     flex-direction: column; /* Stack rows vertically */
-    gap: 20px;
+    gap: 10px; /* Reduce the gap between top and bottom rows */
 }
 
 .footer-top {
@@ -424,9 +430,14 @@ button:hover:after {
 .footer-bottom-row {
     display: flex;
     justify-content: center; /* Center the row horizontally */
-    gap: 10px; /* Reduce the gap between components */
+    gap: 5px; /* Further reduce the gap between components */
     width: 100%;
     text-align: center; /* Center-align text inside the row */
+}
+
+.contact-info {
+    text-align: left; /* Align everything to the left */
+    padding-left: 5rem;
 }
 
 .contact-info,
@@ -456,51 +467,6 @@ button:hover:after {
 .links a:hover,
 .request-for a:hover {
     text-decoration: none; /* Remove underline on hover */
-}
-
-.contact-info form {
-    display: flex;
-    gap: 10px; /* Add spacing between the textarea and button */
-    align-items: center; /* Align items vertically */
-}
-
-.contact-info form textarea {
-    width: 70%; /* Set width to 70% */
-    height: 50px; /* Match the height of the button */
-    border-radius: 15px; /* Add rounded corners */
-    border: 1px solid #ccc; /* Add a border */
-    padding: 10px; /* Add padding inside the textarea */
-    font-size: 16px; /* Adjust font size */
-    resize: none; /* Disable resizing */
-    box-sizing: border-box; /* Include padding and border in the width/height */
-}
-
-.contact-info form {
-    display: flex;
-    gap: 10px; /* Add spacing between the textarea and button */
-    align-items: center; /* Align items vertically */
-}
-
-.contact-info form button {
-    width: 25%; /* Set width to 20% */
-    height: 50px; /* Match the height of the textarea */
-    border-radius: 15px; /* Add rounded corners */
-    border: none; /* Remove default border */
-    background-color: #ffffff; /* Set background color */
-    color: #000000; /* Set text color */
-    font-size: 16px; /* Adjust font size */
-    cursor: pointer; /* Add pointer cursor */
-    box-sizing: border-box; /* Include padding and border in the width/height */
-}
-
-.contact-info form button:hover {
-    background-color: #000000; /* Darken background on hover */
-    color: #ffffff;
-}
-
-.contact-info {
-    text-align: left; /* Align everything to the left */
-    padding-left: 5rem;
 }
 
 .contact-info .GetInTouch a {
