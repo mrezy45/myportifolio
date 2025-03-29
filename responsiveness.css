@@ -63,7 +63,7 @@
         
     }
     .hero .content p {
-        font-size: 2.5rem; /* Further increase the font size of the paragraph */
+        font-size: 3rem; /* Further increase the font size of the paragraph */
     }
     .hero .image img {
         margin-right: 0;
@@ -153,7 +153,7 @@
     }
 
     .hero .content p {
-        font-size: 2.0rem; /* Adjust font size for paragraph */
+        font-size: 2.5rem; /* Adjust font size for paragraph */
     }
 }
 
@@ -163,6 +163,6 @@
     }
 
     .hero .content p {
-        font-size: 0.5rem; /* Scale down paragraph font size */
+        font-size: 2.5rem; /* Scale down paragraph font size */
     }
 }
