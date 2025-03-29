@@ -51,7 +51,7 @@
 
     /* Hero Section */
     .hero {
-        padding-top: 0; /* Eliminate the space above the hero section */
+        padding-top: 20px; /* Reduce the top padding of the hero section */
     }
     .hero .top-row {
         flex-direction: column;
@@ -70,6 +70,9 @@
         max-width: 120%; /* Increase the size of the image */
         width: auto; /* Prevent the width from being reduced */
         height: auto; /* Maintain aspect ratio */
+    }
+    .hero .image {
+        padding-top: 10px; /* Reduce the top padding of the hero image */
     }
     .hero .bottom-row {
         justify-content: center; /* Center the social icons */

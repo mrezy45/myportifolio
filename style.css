@@ -56,12 +56,21 @@ body {
     margin-left: 0; /* Align logo to the left */
 }
 .navbar .menu {
-    display: flex;
-    gap: 15px; /* Add spacing between menu items */
-    flex-wrap: wrap; /* Ensure menu items wrap properly */
-    justify-content: flex-end; /* Align menu items to the right */
-    align-items: center; /* Align items vertically */
+    position: absolute; /* Position the menu relative to the navbar */
+    top: 100%; /* Place it directly below the navbar */
+    left: 0; /* Align it to the left edge of the navbar */
+    width: 100%; /* Make it span the full width */
+    background-color: #ffffff; /* Ensure the background matches the navbar */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+    z-index: 999; /* Ensure it appears above other elements */
+    display: none; /* Initially hidden */
 }
+
+.navbar .menu.show {
+    display: flex; /* Show the menu when toggled */
+    flex-direction: column; /* Stack menu items vertically */
+}
+
 .navbar .button {
    color: #000000;
    margin-right: 50px;
