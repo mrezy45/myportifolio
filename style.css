@@ -17,10 +17,13 @@ body {
 
 /*NAVBAR*/
 .navbar {
-    position: fixed; /* Make the navbar fixed */
-    top: 0; /* Position it at the top */
-    width: 100%; /* Ensure it spans the full width */
-    z-index: 1000; /* Ensure it stays above other elements */
+    position: fixed; /* Keep the navbar fixed at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    opacity: 1; /* Ensure it's always visible */
+    transform: translateX(0); /* Remove animation-related transform */
+    transition: none; /* Disable transition effects */
     display: flex;
     flex-direction: row; /* Ensure logo and menu icon are on the same line */
     justify-content: space-between; /* Space between logo and menu icon */
@@ -28,16 +31,11 @@ body {
     background-color: #ffffff;
     padding: 10px 20px; /* Add consistent padding */
     flex-wrap: nowrap; /* Prevent wrapping */
-    opacity: 0; /* Initially hidden */
-    transform: translateX(-100%); /* Start off-screen to the left */
-    transition: opacity 0.5s ease, transform 0.5s ease;
     margin-bottom: 5px; /* Reduce the space under the navbar */
 }
 
 .navbar.slide-in-left {
-    opacity: 1; /* Fully visible */
-    transform: translateX(0); /* Move into position */
-    animation: slideInLeft 1.5s forwards; /* Increase duration to 1.5s */
+    animation: none; /* Disable slide-in animation */
 }
 
 .navbar a {
@@ -163,7 +161,7 @@ button:hover:after {
     opacity: 0; /* Initially hidden */
     transform: translateX(100%); /* Start off-screen to the right */
     transition: opacity 0.5s ease, transform 0.5s ease;
-    padding-top: 10px; /* Reduce the top padding */
+    padding-top: 50px; /* Increase the top padding */
 }
 
 .hero.slide-in-right {
@@ -222,7 +220,7 @@ button:hover:after {
     justify-content: center;
     margin-bottom: 20px;
     border: 2px, #000000;
-    padding-left: 15rem;
+    padding-left: 8rem;
 }
 
 .hero .social-icons a {

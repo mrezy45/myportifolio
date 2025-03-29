@@ -36,7 +36,7 @@ function animateNavbarAndHeroOnLoad() {
     }
 }
 
-// Ensure animations are triggered for the navbar, hero, and other sections
+// Ensure animations are triggered for the hero and other sections
 window.addEventListener('scroll', animateSectionsOnScroll);
 window.addEventListener('DOMContentLoaded', () => {
     animateNavbarAndHeroOnLoad(); // Trigger hero animations on DOM load
