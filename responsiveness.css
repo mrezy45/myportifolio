@@ -3,8 +3,9 @@
         font-size: 1.2rem; 
     }
     .navbar {
-        flex-direction: column; /* Stack logo and menu vertically */
-        align-items: flex-start; /* Align items to the left */
+        flex-direction: row; /* Ensure logo and menu icon are on the same line */
+        justify-content: space-between; /* Space between logo and menu icon */
+        align-items: center; /* Align items vertically */
         padding: 10px 10px; /* Reduce padding to minimize space */
         margin-bottom: 0; /* Remove any bottom margin */
     }
@@ -58,15 +59,23 @@
         margin: 3px 0; 
         
     }
+    .hero .content p {
+        font-size: 1.5rem; /* Increase the font size of the paragraph */
+    }
     .hero .image img {
         margin-right: 0;
-        max-width: 100%; /* Ensure the image takes full width */
+        max-width: 120%; /* Increase the size of the image */
         width: auto; /* Prevent the width from being reduced */
         height: auto; /* Maintain aspect ratio */
     }
     .hero .bottom-row {
-        flex-direction: column;
+        justify-content: center; /* Center the social icons */
+        align-items: center;
+        flex-direction: row; /* Ensure social icons are in a row */
         width: 100%;
+    }
+    .hero .line {
+        display: none; /* Hide the line in mobile view */
     }
 
     /* Skills Section */

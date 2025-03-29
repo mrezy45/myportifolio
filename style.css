@@ -193,6 +193,7 @@ button:hover:after {
 .hero .image {
     flex: 1;
     text-align: right;
+    padding-top: 30px; /* Increase the top padding for the image */
 }
 
 .hero .image img {
@@ -209,9 +210,10 @@ button:hover:after {
 
 .hero .bottom-row {
     display: flex;
-    justify-content: space-between; /* Space between social icons and the line */
+    justify-content: center; /* Center the bottom-row horizontally */
     align-items: center; /* Align items vertically */
     width: 100%; /* Ensure full width */
+    padding: 0 20px; /* Add equal padding on the left and right */
 }
 
 .hero .social-icons {
