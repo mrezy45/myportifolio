@@ -406,7 +406,7 @@ button:hover:after {
 .footer-top {
     text-align: left; /* Align the content to the left */
     padding: 10px 10px;
-    padding-left: 10rem;
+    padding-left: 5rem;
     
 }
 
@@ -500,7 +500,7 @@ button:hover:after {
 
 .contact-info {
     text-align: left; /* Align everything to the left */
-    padding-left: 10rem;
+    padding-left: 5rem;
 }
 
 .contact-info .GetInTouch a {

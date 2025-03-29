@@ -144,3 +144,13 @@
         font-size: 1.2rem; /* Adjust font size for paragraph */
     }
 }
+
+@media (max-width: 1200px) {
+    .hero .content h1 {
+        font-size: 2.5rem; /* Scale down h1 font size */
+    }
+
+    .hero .content p {
+        font-size: 1rem; /* Scale down paragraph font size */
+    }
+}
