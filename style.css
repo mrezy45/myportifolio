@@ -19,8 +19,9 @@ body {
 .navbar {
     position: fixed; /* Keep the navbar fixed at the top */
     top: 0;
-    width: 100%;
-    z-index: 1000;
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Ensure it stays above other elements */
+    background-color: #ffffff; /* Ensure background color is consistent */
     opacity: 1; /* Ensure it's always visible */
     transform: translateX(0); /* Remove animation-related transform */
     transition: none; /* Disable transition effects */
@@ -28,8 +29,8 @@ body {
     flex-direction: row; /* Ensure logo and menu icon are on the same line */
     justify-content: space-between; /* Space between logo and menu icon */
     align-items: center;
-    background-color: #ffffff;
-    padding: 10px 20px; /* Add consistent padding */
+    padding: 5px 15px; /* Reduce the padding of the navbar */
+    height: 60px; /* Set a smaller height for the navbar */
     flex-wrap: nowrap; /* Prevent wrapping */
     margin-bottom: 5px; /* Reduce the space under the navbar */
     animation: slideInFromLeft 0.8s ease-out; /* Apply the animation */
@@ -56,14 +57,15 @@ body {
     margin-left: 0; /* Align logo to the left */
 }
 .navbar .menu {
-    position: absolute; /* Position the menu relative to the navbar */
-    top: 100%; /* Place it directly below the navbar */
-    left: 0; /* Align it to the left edge of the navbar */
-    width: 100%; /* Make it span the full width */
+    display: flex; /* Ensure menu items are on the same line */
+    flex-direction: row; /* Arrange menu items in a row */
+    justify-content: flex-end; /* Align menu items to the right */
+    align-items: center; /* Align items vertically */
+    position: static; /* Remove absolute positioning */
+    width: auto; /* Adjust width to fit content */
     background-color: #ffffff; /* Ensure the background matches the navbar */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+    box-shadow: none; /* Remove shadow */
     z-index: 999; /* Ensure it appears above other elements */
-    display: none; /* Initially hidden */
 }
 
 .navbar .menu.show {
@@ -73,7 +75,9 @@ body {
 
 .navbar .button {
    color: #000000;
-   margin-right: 50px;
+   padding: 8px 16px; /* Reduce the padding of the button */
+   font-size: 16px; /* Increase the font size of the button text */
+   margin-right: 20px; /* Reduce the margin on the right */
 }
 .navbar .button:hover {
     color: #ffffff;
@@ -216,14 +220,46 @@ button:hover:after {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding-top: 30px; /* Increase the top padding */
+}
+
+.hero .top-row .content h1 {
+    font-size: 3.5rem; /* Increase the font size of the h1 */
+}
+
+.hero .top-row .content p {
+    font-size: 1.5rem; /* Increase the font size of the paragraph */
 }
 
 .hero .bottom-row {
     display: flex;
     justify-content: center; /* Center the bottom-row horizontally */
     align-items: center; /* Align items vertically */
-    width: 100%; /* Ensure full width */
+    width: 70%; /* Ensure full width */
     padding: 0 20px; /* Add equal padding on the left and right */
+    margin-left: 20px; /* Increase the left margin */
+    margin-right: 20px; /* Increase the right margin */
+}
+
+.hero .second-row {
+    display: flex;
+    justify-content: space-between; /* Space between the image and paragraph */
+    align-items: center; /* Align items vertically */
+    margin-top: 20px; /* Add spacing above the second row */
+}
+
+.hero .second-row .image {
+    flex: 1; /* Allow the image to take up equal space */
+    text-align: right; /* Align the image to the right */
+}
+
+.hero .second-row .content {
+    flex: 1; /* Allow the paragraph to take up equal space */
+    margin-left: 20px; /* Add spacing between the image and paragraph */
+}
+
+.hero .second-row .content p {
+    font-size: 1.5rem; /* Increase the font size of the paragraph */
 }
 
 .hero .social-icons {
@@ -266,6 +302,8 @@ button:hover:after {
     padding: 50px;
     background-color: #ffffff;
     text-align: center; /* Center-align the entire section */
+    width: 70%; /* Set section width to 100% */
+    margin: 0 auto; /* Center the skills section horizontally */
 }
 
 .skills h1 {
@@ -426,8 +464,11 @@ button:hover:after {
 }
 
 .footer-top p {
-    text-align: left; /* Align the paragraph to the left */
-    width: 60%;
+    overflow-wrap: break-word; /* Ensure long words break to fit within the viewport */
+    word-wrap: break-word; /* Support for older browsers */
+    margin: 0 auto; /* Center the paragraph horizontally */
+    padding: 10px; /* Add padding for better readability */
+    width: 100%; /* Ensure it spans the full width */
 }
 
 .footer-bottom {
@@ -576,5 +617,13 @@ button:hover:after {
 
 .request-for a:hover {
     text-decoration: underline;
+}
+
+/* Paragraph styling */
+p {
+    overflow-wrap: break-word; /* Ensure long words break to fit within the viewport */
+    word-wrap: break-word; /* Support for older browsers */
+    margin: 0 auto; /* Center paragraphs horizontally */
+    padding: 10px; /* Add padding for better readability */
 }
 
