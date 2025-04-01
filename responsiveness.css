@@ -148,6 +148,19 @@
     .footer-content .links a {
         flex: none; /* Prevent links from stretching */
     }
+
+    .footer-bottom-row {
+        flex-direction: column; /* Stack components vertically */
+        align-items: flex-start; /* Align components to the left */
+        gap: 20px; /* Add spacing between components */
+    }
+
+    .footer-top,
+    .contact-info,
+    .links,
+    .request-for {
+        padding-left: 20px; /* Ensure consistent padding-left for all footer elements */
+    }
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {

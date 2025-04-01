@@ -561,6 +561,7 @@ button:hover:after {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-left: 5rem; /* Ensure consistent padding-left for all footer elements */
 }
 
 .request-for h1 {
