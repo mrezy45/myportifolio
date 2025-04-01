@@ -229,6 +229,21 @@
     .hero .content p {
         font-size: 1.0rem; /* Scale down paragraph font size */
     }
+
+    .hero .second-row {
+        flex-direction: column; /* Stack the image under the paragraph */
+        align-items: center; /* Center-align the content */
+    }
+
+    .hero .second-row .image {
+        order: 2; /* Place the image below the paragraph */
+        margin-top: 10px; /* Add spacing above the image */
+    }
+
+    .hero .second-row .content {
+        order: 1; /* Place the paragraph above the image */
+        text-align: center; /* Center-align the text */
+    }
 }
 
 @media (min-width: 769px) {
