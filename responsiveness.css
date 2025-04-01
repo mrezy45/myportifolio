@@ -116,6 +116,15 @@
         margin-top: 20px; /* Reduce the space between the navbar and the h1 */
     }
 
+    .hero .content h1 {
+        font-size: 2rem; /* Reduce the size of h1 */
+    }
+
+    .hero .content p,
+    .hero .second-row .content p {
+        font-size: 1.2rem; /* Reduce the size of paragraphs */
+    }
+
     /* Skills Section */
     .skill-row {
         grid-template-columns: repeat(2, 1fr);
@@ -236,12 +245,12 @@
     }
 
     .hero .second-row .image {
-        order: 1; /* Place the image below the paragraph */
+        order: 2; /* Place the image below the paragraph */
         margin-top: 10px; /* Add spacing above the image */
     }
 
     .hero .second-row .content {
-        order: 2; /* Place the paragraph above the image */
+        order: 1; /* Place the paragraph above the image */
         text-align: center; /* Center-align the text */
     }
 }
