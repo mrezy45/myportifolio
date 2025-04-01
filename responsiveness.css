@@ -236,12 +236,12 @@
     }
 
     .hero .second-row .image {
-        order: 2; /* Place the image below the paragraph */
+        order: 1; /* Place the image below the paragraph */
         margin-top: 10px; /* Add spacing above the image */
     }
 
     .hero .second-row .content {
-        order: 1; /* Place the paragraph above the image */
+        order: 2; /* Place the paragraph above the image */
         text-align: center; /* Center-align the text */
     }
 }
