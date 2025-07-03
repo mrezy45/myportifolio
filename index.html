@@ -11,20 +11,21 @@
 </head>
 <body>
     <!---------------nav bar----------------------->
-    <div class="navbar">
-        <a href="index.html" class="logo">MPIIMA</a> <!-- Add href to link back to home -->
-        <div class="menu-icon" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
+   <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">MPIIMA</a>
+            <div class="menu">
+                <a href="#about">About Me</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#test">Contact Me</a>
+                <button class="button">Resume</button>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>                
         </div>
-        <div class="menu">
-            <a href="#about">About Me</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact Me</a>
-            <button class="button">Resume</button>
-        </div>
-        
-    </div>
+   </nav>
 
     <!---------------hero section----------------------->
     <div class="hero">
@@ -33,7 +34,7 @@
                 <h1>Hi, I'm <span>Mpiima Rodney Ezra</span> Software Engineer </h1>
                 <p>I am a dedicated software engineer eager to contribute to innovative projects and expand my skills in the realm of software development. </p>
             </div>
-            <div class="image">
+            <div class="hero-image">
                 <img src="/assets/images/hero1.PNG" alt="hero image"> <!-- Use absolute path starting with '/' -->
             </div>
         </div>
@@ -42,7 +43,7 @@
                 <p>I thrive in collaborative environments, valuing teamwork and open communication
                     to craft efficient solutions as well as committed to continuous improvement and embracing feedback as a catalyst for growth.</p>
             </div>
-            <div class="image">
+            <div class="hero-image">
                 <img src="/assets/images/image2.PNG" alt="hero image"> <!-- Use absolute path starting with '/' -->
             </div>
         </div>
@@ -53,7 +54,6 @@
                 <a href="https://sessionize.com/mpiima-rodney-ezra/" target="_blank"><i class="fas fa-microphone"></i></a>
                 <a href="https://x.com/EzraMpiima" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
-            <div class="line"></div>
         </div>
     </div>
 
@@ -72,10 +72,6 @@
             <div class="skill">
                 <img src="../assets/images/skill-3.png" alt="javascript">
                 <h2>JavaScript</h2>
-            </div>
-            <div class="skill">
-                <img src="../assets/images/skill-4.png" alt="react">
-                <h2>React</h2>
             </div>
             <div class="skill">
                 <img src="/assets/images/skill-5.png" alt="PHP">
@@ -105,45 +101,96 @@
     </div>
 
    <!--------------------------My experience Section------------------------------->
-   <div class="experience section" id="experience">
-       <h1>My <span>Experience</span></h1>
-       <div class="experience-row">
-           <div class="experience-item">
-               <h2>Software Engineering Internship - GNEX</h2>
-               <p>Worked on developing scalable web applications and contributed to the design and implementation of key features.</p>
-           </div>
-           <div class="experience-item">
-               <h2>Software Engineering Internship - Kreative Campus</h2>
-               <p>Collaborated with a team to build user-friendly interfaces and optimized application performance.</p>
-           </div>
-           <div class="experience-item">
-               <h2>Junior Software Engineer - NASDAN</h2>
-               <p>Developed and maintained software solutions, ensuring high-quality code and seamless user experiences.</p>
-           </div>
-       </div>
-   </div>
+  <div class="experience section" id="experience">
+    <h1>My <span>Experience</span></h1>
+    <div class="experience-row">
+        <div class="experience-item">
+            <h2>Junior Software Engineer - NASDAN</h2>
+            <div class="experience-item-content">
+                <img src="/assets/images/xp2.jpeg" alt="NASDAN logo" class="experience-image">
+                <p>Contributed to building scalable web applications, maintained production systems, fixed critical bugs, and supported deployment pipelines to ensure continuous delivery.</p>
+            </div>
+        </div>
+
+        
+        <div class="experience-item">
+            <h2>Software Engineering Intern - GNEX</h2>
+            <div class="experience-item-content">
+                <img src="/assets/images/xp1.jpg" alt="GNEX logo" class="experience-image">
+                <p>Built Comprehensive mobile applications with React Native, implemented RESTful APIs, and participated in Agile sprint planning and code reviews.</p>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <h2>Software Engineering Intern - Kreative Campus</h2>
+            <div class="experience-item-content">
+                <img src="/assets/images/xp3.jpeg" alt="Kreative Campus logo" class="experience-image">
+                <p>Worked on frontend development using modern frameworks, collaborated in cross-functional teams, and helped enhance UI/UX through performance tuning.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
    <!---------------------------------My Projects Section-------------------------->
    <div class="projects section" id="projects">
-       <h1>My <span>Projects</span></h1>
-       <div class="project-row">
-           <div class="project-item">
-               <h2>My Chart Library</h2>
-               <p>A customizable charting library for creating interactive data visualizations.</p>
-               <a href="https://github.com/mrezy45/My-Chart-Library" target="_blank">View Project</a>
-           </div>
-           <div class="project-item">
-               <h2>Simple Data Encryption App</h2>
-               <p>An application that encrypts and decrypts data using secure algorithms.</p>
-               <a href="https://github.com/mrezy45/encryption" target="_blank">View Project</a>
-           </div>
-           <div class="project-item">
-               <h2>WikiSchool</h2>
-               <p>An educational platform that provides curated learning resources for students.</p>
-               <a href="https://github.com/mrezy45/WikiSchool" target="_blank">View Project</a>
-           </div>
-       </div>
-   </div>
+  <h1>My <span>Projects</span></h1>
+  <div class="project-row">
+
+    <div class="project-item">
+      <img src="/assets/images/pg1.png" alt="My Chart Library" class="project-image">
+      <h2>HikmaKasozi General Hardware Website</h2>
+      <p>A customizable charting library for creating interactive data visualizations.</p>
+      <div class="tech-stack">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+      </div>
+      <div class="project-links">
+        <a href="https://live-demo-url.com" class="btn" target="_blank">Live Demo</a>
+        <a href="https://github.com/mrezy45/My-Chart-Library" class="btn secondary" target="_blank">See on GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-item">
+      <img src="/assets/images/pg2.png" alt="Encryption App" class="project-image">
+      <h2>Blue Clinics Uganda Website</h2>
+      <p>An application that encrypts and decrypts data using secure algorithms.</p>
+      <div class="tech-stack">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+      </div>
+      <div class="project-links">
+        <a href="https://live-demo-url.com" class="btn" target="_blank">Live Demo</a>
+        <a href="https://github.com/mrezy45/encryption" class="btn secondary" target="_blank">See on GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-item">
+      <img src="/assets/images/pg3.png" alt="WikiSchool" class="project-image">
+      <h2>WikiSchool</h2>
+      <p>An educational platform that provides curated learning resources for students.</p>
+      <div class="tech-stack">
+        <span>HTML</span>
+        <span>Tailwind CSS</span>
+        <span>React</span>
+      </div>
+      <div class="project-links">
+        <a href="https://live-demo-url.com" class="btn" target="_blank">Live Demo</a>
+        <a href="https://github.com/mrezy45/WikiSchool" class="btn secondary" target="_blank">See on GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+ <!---------------------------Call To Action Section-------------------------------------->
+<div class="cta section" id="contact-cta">
+  <h1>Interested in working with me?</h1>
+  <p>
+    I'm always open to new opportunities and collaborations. Whether you're building something innovative or need help bringing your idea to life, let's connect and create something impactful together.
+  </p>
+  <a href="#contact" class="btn">Get in Touch</a>
+</div>
+
 
    <!---------------------------Footer Section-------------------------------------->
    <footer class="footer">
@@ -158,8 +205,8 @@
                <div class="contact-info">
                    <div class="GetInTouch">
                         <h1>Get In Touch</h1>
-                        <p>Phone: +256 788 387 097</p>
-                        <p>Email: mrezy45@gmail.com</p>
+                        <a href="https://wa.me/yourphonenumber" target="_blank">Phone: +256 788 387 097</a>
+                        <a href="https://wa.me/yourphonenumber" target="_blank">Email: mrezy45@gmail.com </a>
                         <a href="https://wa.me/yourphonenumber" target="_blank">WhatsApp</a>
                         <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
                    </div>

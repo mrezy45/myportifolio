@@ -11,439 +11,384 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Ensure content is spaced properly */
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     font-size: 1.2rem;
 }
 
 /*NAVBAR*/
+.navbar .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .navbar {
-    position: fixed; /* Keep the navbar fixed at the top */
-    top: 0;
-    width: 100%; /* Ensure it spans the full width */
-    z-index: 1000; /* Ensure it stays above other elements */
-    background-color: #ffffff; /* Ensure background color is consistent */
-    opacity: 1; /* Ensure it's always visible */
-    transform: translateX(0); /* Remove animation-related transform */
-    transition: none; /* Disable transition effects */
-    display: flex;
-    flex-direction: row; /* Ensure logo and menu icon are on the same line */
-    justify-content: space-between; /* Space between logo and menu icon */
-    align-items: center;
-    padding: 5px 15px; /* Reduce the padding of the navbar */
-    height: 60px; /* Set a smaller height for the navbar */
-    flex-wrap: nowrap; /* Prevent wrapping */
-    margin-bottom: 5px; /* Reduce the space under the navbar */
-    animation: slideInFromLeft 0.8s ease-out; /* Apply the animation */
+  position: fixed;
+  padding: 10px 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff;
 }
 
-.navbar.slide-in-left {
-    animation: none; /* Disable slide-in animation */
+/* Logo */
+.logo {
+  color: #000000;
+  font-size: 36px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.navbar a {
-    color: #000000;
-    text-decoration: none;
-    padding: 14px 20px;
-}
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-.navbar .logo {
-    text-decoration: none; /* Remove underline for the link */
-    color: inherit; /* Inherit the text color */
-    font-size: 35px; /* Adjust font size for better visibility */
-    font-weight: bold;
-    margin-left: 0; /* Align logo to the left */
-}
-.navbar .menu {
-    display: flex; /* Ensure menu items are on the same line */
-    flex-direction: row; /* Arrange menu items in a row */
-    justify-content: flex-end; /* Align menu items to the right */
-    align-items: center; /* Align items vertically */
-    position: static; /* Remove absolute positioning */
-    width: auto; /* Adjust width to fit content */
-    background-color: #ffffff; /* Ensure the background matches the navbar */
-    box-shadow: none; /* Remove shadow */
-    z-index: 999; /* Ensure it appears above other elements */
+/* Menu */
+.menu {
+  display: flex;
+  gap: 25px;
+  align-items: center;
 }
 
-.navbar .menu.show {
-    display: flex; /* Show the menu when toggled */
-    flex-direction: column; /* Stack menu items vertically */
+.menu a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
-.navbar .button {
-   color: #000000;
-   padding: 8px 16px; /* Reduce the padding of the button */
-   font-size: 16px; /* Increase the font size of the button text */
-   margin-right: 20px; /* Reduce the margin on the right */
-}
-.navbar .button:hover {
-    color: #ffffff;
+.menu a:hover {
+  color: #58a6ff;
 }
 
-.navbar .menu a {
-    color: #000000;
-    text-decoration: none;
-    padding: 10px 15px; /* Add consistent padding for links */
+/* Resume Button */
+.button {
+  padding: 8px 16px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
 }
 
-.navbar .menu a:hover {
-    background-color: #ddd;
-    color: black;
+.button:hover {
+  background-color: #007acc;
 }
 
+/* Hide menu icon (not needed without responsiveness) */
 .menu-icon {
-    display: none; /* Hide menu icon by default */
-    font-size: 24px;
-    cursor: pointer;
-    color: #000000;
-    margin-right: 0; /* Align menu icon to the right */
+  display: none;
 }
 
-
-/* Style for the buttons */
-button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: rgb(252, 251, 251);
-    border: 2px solid #000000;
-    transition: all 0.2s ease-in;
-    position: relative;
-    overflow: hidden;
-    font-size: 18px;
-    cursor: pointer;
-    color: rgb(248, 248, 248);
-    z-index: 1;
-}
-
-button:before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) scaleY(1) scaleX(1.25);
-    top: 100%;
-    width: 140%;
-    height: 180%;
-    background-color: rgb(252, 251, 251);
-    border-radius: 50%;
-    display: block;
-    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-    z-index: -1;
-}
-
-button:after {
-    content: "";
-    position: absolute;
-    left: 55%;
-    transform: translateX(-50%) scaleY(1) scaleX(1.45);
-    top: 180%;
-    width: 160%;
-    height: 190%;
-    background-color: #000000;
-    border-radius: 50%;
-    display: block;
-    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-    z-index: -1;
-}
-
-button:hover {
-    color: #ffffff;
-    border: 1px solid #000000;
-}
-
-button:hover:before {
-    top: -35%;
-    background-color: #ffffff;
-    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-}
-
-button:hover:after {
-    top: -45%;
-    background-color: #000000;
-    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-}
 
 /*HERO SECTION*/
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-    background-color: #ffffff;
-    opacity: 0; /* Initially hidden */
-    transform: translateX(100%); /* Start off-screen to the right */
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    padding-top: 50px; /* Increase the top padding */
+  width: 100%;
+  padding: 80px 0 60px; /* Add space below navbar */
+  background-color: #f9f9f9;
+  color: #1f1f1f;
 }
 
-.hero.slide-in-right {
-    opacity: 1; /* Fully visible */
-    transform: translateX(0); /* Move into position */
-    animation: slideInRight 2s forwards; /* Increase duration to 2s */
+.top-row,
+.second-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+  gap: 40px;
 }
 
-.hero .content {
-    flex: 1;
-    margin: 30px;
-    padding-top: 30px;
+/* Flip second row order */
+.second-row {
+  flex-direction: row-reverse;
 }
 
-.hero .content h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px; /* Reduce the space below the h1 */
+.content {
+  flex: 1;
 }
 
-.hero .content h1 span {
+.content h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.content h1 span {
     color: #ffffff; 
-    -webkit-text-stroke: 2px #000000; 
+    -webkit-text-stroke: 2px #000000;
 }
 
-.hero .content p {
-    margin-top: 0; /* Remove any top margin */
+.content p {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-.hero .image {
-    flex: 1;
-    text-align: right;
-    padding-top: 30px; /* Increase the top padding for the image */
+.hero-image {
+  flex: 1;
+  text-align: center;
 }
 
-.hero .image img {
-    max-width: 100%;
-    height: auto;
-    margin-right: 35px;
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+/* Bottom Row */
+.bottom-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
 }
 
-.hero .top-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-top: 30px; /* Increase the top padding */
+.social-icons {
+  display: flex;
+  gap: 25px;
+  font-size: 36px;
 }
 
-.hero .top-row .content h1 {
-    font-size: 3.5rem; /* Increase the font size of the h1 */
+.social-icons a {
+  color: #1f1f1f;
+  transition: color 0.3s ease;
 }
 
-.hero .top-row .content p {
-    font-size: 1.5rem; /* Increase the font size of the paragraph */
+.social-icons a:hover {
+  color: #007acc;
 }
 
-.hero .bottom-row {
-    display: flex;
-    justify-content: center; /* Center the bottom-row horizontally */
-    align-items: center; /* Align items vertically */
-    width: 70%; /* Ensure full width */
-    padding: 0 20px; /* Add equal padding on the left and right */
-    margin-left: 20px; /* Increase the left margin */
-    margin-right: 20px; /* Increase the right margin */
+/*SKILLS SECTION*/
+.skills.section {
+  padding: 80px 10%;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.hero .second-row {
-    display: flex;
-    justify-content: space-between; /* Space between the image and paragraph */
-    align-items: center; /* Align items vertically */
-    margin-top: 20px; /* Add spacing above the second row */
+.skills.section h1 {
+  font-size: 48px;
+  margin-bottom: 30px;
 }
 
-.hero .second-row .image {
-    flex: 1; /* Allow the image to take up equal space */
-    text-align: right; /* Align the image to the right */
-}
-
-.hero .second-row .content {
-    flex: 1; /* Allow the paragraph to take up equal space */
-    margin-left: 20px; /* Add spacing between the image and paragraph */
-}
-
-.hero .second-row .content p {
-    font-size: 1.5rem; /* Increase the font size of the paragraph */
-}
-
-.hero .social-icons {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 20px;
-    border: 2px, #000000;
-}
-
-.hero .social-icons a {
-    color: #000000;
-    font-size: 24px;
-    text-decoration: none;
-    padding: 15px;
-    border: 2px solid #000000;
-    width: 54px; /* Fixed width */
-    height: 54px; /* Fixed height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-}
-
-.hero .social-icons a:hover {
-    color: #242424;
-}
-
-.hero .line {
-    flex: 1; /* Allow the line to take up remaining space */
-    border-top: 2px solid #000000;
-    margin-left: 20px;
-    margin-right: 20px; /* Add spacing between the social icons and the line */
-    width: 40%;
-    padding-bottom: 26px;
-}
-
-/*MY SKILLS SECTION*/
-.skills {
-    padding: 50px;
-    background-color: #ffffff;
-    text-align: center; /* Center-align the entire section */
-    width: 70%; /* Set section width to 100% */
-    margin: 0 auto; /* Center the skills section horizontally */
-}
-
-.skills h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: lighter;
-}
-
-.skills h1 span{
-    font-weight: bold;
+.skills.section h1 span {
+  color: #000000;
 }
 
 .skill-row {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Adjust columns for equal spacing */
-    gap: 35px;
-    justify-content: center; /* Center the grid horizontally */
-    align-items: center; /* Center items vertically */
-    margin: 0 auto; /* Center the grid within the section */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 
 .skill {
-    border: 2px solid #000000;
-    padding: 25px;
-    text-align: center;
-    width: 150px;
-    height: 150px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
 }
 
 .skill img {
-    max-width: 60%;
-    height: auto;
-    margin-bottom: 5px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .skill h2 {
-    font-size: 18px;
+  font-size: 20px;
+  color: #1f1f1f;
 }
 
 /*EXPERIENCE SECTION*/
-.experience {
-    background-color: black;
-    color: white;
-    padding: 50px 20px;
-    text-align: center;
-    width: 100%; /* Set section width to 100% */
+.experience.section {
+  padding: 80px 10%;
+  background-color: #000000;
+  color: #1f1f1f;
 }
 
-.experience h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+.experience.section h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-.experience h1 span {
-    color: #ffffff; /* Highlight color for "Experience" */
+.experience.section h1 span {
+  color: #ffffff;
 }
 
 .experience-row {
-    display: flex;
-    flex-direction: column; /* Changed to column layout */
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .experience-item {
-    background-color: #000000;
-    border: 2px solid #ffffff;
-    border-radius: 25px;
-    padding: 20px;
-    width: 80%;
-    text-align: left;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .experience-item h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.experience-item-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.experience-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .experience-item p {
-    font-size: 1em;
-    line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /*PROJECTS SECTION*/
-.projects {
-    background-color: white; /* White background */
-    color: black;
-    padding: 50px 20px;
-    text-align: center;
-    width: 100%;
+.projects.section {
+  padding: 80px 10%;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1f1f1f;
 }
 
-.projects h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+.projects.section h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-.projects h1 span {
-    color: #000000; /* Highlight color for "Projects" */
+.projects.section h1 span {
+  color: #007acc;
 }
 
 .project-row {
-    display: flex;
-    flex-direction: column; /* Column layout */
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
 }
 
 .project-item {
-    background-color: #ffffff;
-    border: 2px solid #000000;
-    border-radius: 25px;
-    padding: 20px;
-    width: 80%;
-    text-align: left;
+  flex: 1;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .project-item h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+  font-size: 22px;
+  margin-bottom: 15px;
 }
 
 .project-item p {
-    font-size: 1em;
-    line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
 }
 
-.project-item a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: bold;
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.project-item a:hover {
-    text-decoration: underline;
+.tech-stack span {
+  background-color: #e0e7ff;
+  color: #1e40af;
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #007acc;
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}
+
+.btn.secondary {
+  background-color: #333333;
+}
+
+.btn.secondary:hover {
+  background-color: #000000;
+}
+/*CTA SECTION*/
+.cta.section {
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.cta.section h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #1f1f1f;
+}
+
+.cta.section p {
+  font-size: 16px;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.cta.section .btn {
+  text-decoration: none;
+  padding: 12px 24px;
+  background-color: #007acc;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.cta.section .btn:hover {
+  background-color: #005fa3;
 }
 
 /*FOOTER SECTION*/

@@ -28,6 +28,7 @@ function animateSectionsOnScroll() {
     });
 }
 
+//animations for hero section and navbar
 function animateNavbarAndHeroOnLoad() {
     const hero = document.querySelector('.hero');
 
